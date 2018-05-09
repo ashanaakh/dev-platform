@@ -2,11 +2,10 @@ resource "google_compute_address" "dev" {
   name = "ashanaakh-dev-ip"
 }
 
-resource "google_compute_instance" "development" {
-  name         = "ashanaakh-dev"
-  project      = "${var.project}"
-  machine_type = "f1-micro"
-  zone         = "us-east1-b"
+resource "google_compute_instance" "dev" {
+  name         = "development"
+  machine_type = "${var.machine_type}"
+  zone         = "${var.region}-b"
 
   allow_stopping_for_update = true
 

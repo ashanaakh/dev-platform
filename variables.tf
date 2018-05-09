@@ -1,8 +1,8 @@
-variable "base" {
+variable "network" {
   type = "string"
 }
 
-variable "network" {
+variable "region" {
   type = "string"
 }
 
@@ -11,9 +11,15 @@ variable "disk_image" {
 }
 
 variable "disk_size" {
-  type = "string"
+  type    = "string"
+  default = "10"
 }
 
 variable "project" {
   type = "string"
+}
+
+variable "machine_type" {
+  type    = "string"
+  default = "f1-micro"
 }
