@@ -23,3 +23,8 @@ variable "machine_type" {
   type    = "string"
   default = "f1-micro"
 }
+
+variable "machine_name" {
+  type    = "string"
+}
+

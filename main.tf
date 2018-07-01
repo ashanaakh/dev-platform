@@ -3,7 +3,7 @@ resource "google_compute_address" "dev" {
 }
 
 resource "google_compute_instance" "dev" {
-  name         = "development"
+  name         = "${var.machine_name}"
   machine_type = "${var.machine_type}"
   zone         = "${var.region}-b"
 
