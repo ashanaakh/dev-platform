@@ -19,12 +19,15 @@ variable "project" {
   type = "string"
 }
 
-variable "machine_type" {
+variable "vm_type" {
   type    = "string"
   default = "f1-micro"
 }
 
-variable "machine_name" {
-  type    = "string"
+variable "vm_name" {
+  type = "string"
 }
 
+variable "dns_name" {
+  type = "string"
+}

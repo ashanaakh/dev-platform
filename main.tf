@@ -3,8 +3,8 @@ resource "google_compute_address" "dev" {
 }
 
 resource "google_compute_instance" "dev" {
-  name         = "${var.machine_name}"
-  machine_type = "${var.machine_type}"
+  name         = "${var.vm_name}"
+  machine_type = "${var.vm_type}"
   zone         = "${var.region}-b"
 
   allow_stopping_for_update = true
@@ -18,10 +18,9 @@ resource "google_compute_instance" "dev" {
     }
   }
 
-  metadata_startup_script = "echo 'test' > /test.txt"
-
   network_interface {
     network = "${var.network}"
+
     access_config {
       nat_ip = "${google_compute_address.dev.address}"
     }
