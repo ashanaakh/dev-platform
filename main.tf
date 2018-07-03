@@ -1,5 +1,5 @@
 resource "google_compute_address" "dev" {
-  name = "ashanaakh-dev-ip"
+  name = "${var.project}-ip"
 }
 
 resource "google_compute_instance" "dev" {
