@@ -31,3 +31,7 @@ variable "vm_name" {
 variable "dns_name" {
   type = "string"
 }
+
+variable "user" {
+  type = "string"
+}
