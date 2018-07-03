@@ -1,2 +1,3 @@
-#/usr/bin/bash
+#!/bin/bash
+
 terraform apply -var-file=dev.tfvars

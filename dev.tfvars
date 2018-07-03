@@ -12,6 +12,6 @@ disk_size = "30"
 
 project = "ashanaakh-dev"
 
-region = "us-east1"
-
 dns_name = "shanaakh.pro"
+
+user = "terraform"
