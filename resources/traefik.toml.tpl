@@ -16,12 +16,12 @@ defaultEntryPoints = ["https","http"]
 
 [docker]
 endpoint = "unix:///var/run/docker.sock"
-domain = "dev.shanaakh.pro"
+domain = "${domain}"
 watch = true
 exposedByDefault = false
 
 [acme]
-email = "ali@shanaakh.pro"
+email = "${email}"
 storage = "acme.json"
 entryPoint = "https"
 onHostRule = true

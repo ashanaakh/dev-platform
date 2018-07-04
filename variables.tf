@@ -35,3 +35,8 @@ variable "dns_name" {
 variable "user" {
   type = "string"
 }
+
+variable "email" {
+  type = "string"
+}
+
