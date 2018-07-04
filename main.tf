@@ -43,7 +43,7 @@ resource "google_compute_instance" "dev" {
   }
 
   provisioner "file" {
-    source      = "resources/traefik.toml"
+    content     = "${data.template_file.traefik.rendered}"
     destination = "/tmp/traefik.toml"
   }
 

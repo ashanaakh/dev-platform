@@ -15,3 +15,5 @@ project = "ashanaakh-dev"
 dns_name = "shanaakh.pro"
 
 user = "terraform"
+
+email = "ali@shanaakh.pro"
