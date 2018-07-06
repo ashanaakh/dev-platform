@@ -45,7 +45,7 @@ module "platform" {
   network    = "${var.network}"
   region     = "${var.region}"
   disk_image = "${var.disk_image}"
-  disk_size  = "${var.disk_image}"
+  disk_size  = "${var.disk_size}"
   project    = "${var.project}"
   vm_type    = "${var.vm_type}"
   vm_name    = "${var.vm_name}"
