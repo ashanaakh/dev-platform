@@ -41,7 +41,7 @@ variable "email" {
 }
 
 module "platform" {
-  source     = "platform/"
+  source     = "modules/platform/"
   network    = "${var.network}"
   region     = "${var.region}"
   disk_image = "${var.disk_image}"
