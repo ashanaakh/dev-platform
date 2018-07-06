@@ -18,19 +18,22 @@ install_docker_compose() {
   chmod +x ${CMPS_PATH}
 }
 
+prepare() {
+  # Set up stuff for traefik.
+  mkdir -p ${TRAEFIK_PATH}
+  touch ${TRAEFIK_PATH}/acme.json && chmod 600 ${TRAEFIK_PATH}/acme.json
+
+  mv /tmp/{docker-compose.yml,traefik.toml} ${TRAEFIK_PATH}
+}
+
 # Install docker.
 install_docker
 
 # Install docker-compose.
 install_docker_compose
 
+# Prepare strcuture.
+prepare
+
 # Create docker network.
 docker network create devnet
-
-# Set up stuff for traefik.
-mkdir -p /opt/traefik
-touch ${TRAEFIK_PATH}/acme.json
-chmod 600 ${TRAEFIK_PATH}/acme.json
-
-mv /tmp/docker-compose.yml ${TRAEFIK_PATH}/docker-compose.yml
-mv /tmp/traefik.toml ${TRAEFIK_PATH}/traefik.toml
