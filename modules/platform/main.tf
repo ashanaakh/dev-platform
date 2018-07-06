@@ -3,9 +3,9 @@ resource "google_compute_address" "dev" {
 }
 
 resource "google_compute_instance" "dev" {
-  name         = "${var.vm_name}"
-  machine_type = "${var.vm_type}"
-  zone         = "${var.region}-b"
+  name         = "${var.instance_name}"
+  machine_type = "${var.instance_type}"
+  zone         = "${var.zone}"
 
   allow_stopping_for_update = true
 
@@ -38,7 +38,7 @@ resource "google_compute_instance" "dev" {
   }
 
   provisioner "file" {
-    source      = "resources/docker-compose.yml"
+    source      = "${data.template_file.docker_compose.rendered}"
     destination = "/tmp/docker-compose.yml"
   }
 
