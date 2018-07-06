@@ -19,13 +19,13 @@ variable "project" {
   type = "string"
 }
 
+variable "vm_name" {
+  type = "string"
+}
+
 variable "vm_type" {
   type    = "string"
   default = "f1-micro"
-}
-
-variable "vm_name" {
-  type = "string"
 }
 
 variable "dns_name" {
@@ -40,3 +40,16 @@ variable "email" {
   type = "string"
 }
 
+module "platform" {
+  source     = "platform/"
+  network    = "${var.network}"
+  region     = "${var.region}"
+  disk_image = "${var.disk_image}"
+  disk_size  = "${var.disk_image}"
+  project    = "${var.project}"
+  vm_type    = "${var.vm_type}"
+  vm_name    = "${var.vm_name}"
+  dns_name   = "${var.dns_name}"
+  user       = "${var.user}"
+  email      = "${var.email}"
+}
