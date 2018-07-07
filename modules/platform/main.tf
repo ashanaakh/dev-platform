@@ -1,5 +1,6 @@
 resource "google_compute_address" "dev" {
-  name = "${var.project}-ip"
+  name   = "${var.project}-ip"
+  region = "${replace(var.zone, "/-.$/", "")}"
 }
 
 resource "google_compute_instance" "dev" {
