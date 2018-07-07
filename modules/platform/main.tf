@@ -39,7 +39,7 @@ resource "google_compute_instance" "dev" {
   }
 
   provisioner "file" {
-    source      = "${data.template_file.docker_compose.rendered}"
+    content     = "${data.template_file.docker_compose.rendered}"
     destination = "/tmp/docker-compose.yml"
   }
 

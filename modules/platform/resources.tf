@@ -2,7 +2,7 @@ data "template_file" "traefik" {
   template = "${file("resources/traefik.toml.tpl")}"
 
   vars {
-    domain = "dev.${var.domain}"
+    domain = "${var.domain}"
     email  = "${var.email}"
   }
 }
