@@ -4,7 +4,7 @@ vm_name = "dev"
 
 disk_image = "debian-9-stretch-v20180507"
 
-create_domain = true
+create_domain = false
 
 domain = "shanaakh.pro"
 

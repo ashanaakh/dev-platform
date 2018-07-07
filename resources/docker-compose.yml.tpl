@@ -7,15 +7,9 @@ services:
     ports:
       - 80:80
       - 443:443
-    networks:
-      - devnet
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
-      - /opt/traefik/traefik.toml:/traefik.toml
-      - /opt/traefik/acme.json:/acme.json
+    labels:
+      - "traefik.frontend.rule=Host:${domain}"
+      - "traefik.port=8080"
     container_name: traefik
-
-networks:
-  devnet:
-    external:
-      name: traefik_default
