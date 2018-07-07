@@ -15,6 +15,10 @@ variable "vm_type" {
   default = "f1-micro"
 }
 
+variable "create_domain" {
+  type = "string"
+}
+
 variable "domain" {
   type = "string"
 }

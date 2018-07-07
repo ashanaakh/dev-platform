@@ -8,5 +8,5 @@ terraform {
 provider "google" {
   credentials = "${file("~/safe/${var.project}.json")}"
   project     = "${var.project}"
-  region      = "${var.region}"
+#  region      = "${var.region}"
 }
