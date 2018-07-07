@@ -2,7 +2,7 @@ version: '3.6'
 
 services:
   traefik:
-    image: traefik:latest
+    image: traefik
     restart: always
     ports:
       - 80:80
@@ -17,4 +17,5 @@ services:
 
 networks:
   devnet:
-    external: true
+    external:
+      name: traefik_default
