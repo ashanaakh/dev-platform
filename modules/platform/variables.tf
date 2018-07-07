@@ -6,7 +6,7 @@ variable "network" {
 
 variable "zone" {
   type        = "string"
-  defualt     = "us-east1-b"
+  default     = "us-east1-b"
   description = "The zone that the machine should be created in."
 }
 

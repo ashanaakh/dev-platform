@@ -3,8 +3,8 @@ resource "google_compute_address" "dev" {
 }
 
 resource "google_compute_instance" "dev" {
-  name         = "${var.instance_name}"
-  machine_type = "${var.instance_type}"
+  name         = "${var.vm_name}"
+  machine_type = "${var.vm_type}"
   zone         = "${var.zone}"
 
   allow_stopping_for_update = true

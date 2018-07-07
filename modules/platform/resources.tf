@@ -8,7 +8,7 @@ data "template_file" "traefik" {
 }
 
 data "template_file" "docker_compose" {
-  template = "${file("resources/docker_compose.yml.tpl")}"
+  template = "${file("resources/docker-compose.yml.tpl")}"
 
   vars {
     domain = "${var.domain}"
